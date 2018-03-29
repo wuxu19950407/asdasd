@@ -1,17 +1,29 @@
 <template>
   <div class="hello">
     <h3>这是登录页面</h3>
+    <button @click="add">+++</button>
   </div>
 </template>
 
 <script>
+import {mapActions} from 'vuex';
+import {mapGetters} from 'vuex';
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
-  }
+  },
+  methods:{
+    ...mapActions(['setNum']),
+    add(){
+      this.setNum(this.getNum)
+    }
+  },
+  computed:{
+    ...mapGetters(['getNum'])
+  },
 }
 </script>
 

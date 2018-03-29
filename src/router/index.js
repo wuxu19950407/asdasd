@@ -20,14 +20,14 @@ export default new Router({
       name: 'List',  
       // alias:'/',      
       component: List,  //指定的组件
-    //   children:[
-    //     {
-    //     path: 'login',   //相对于/list的相对路径
-    //     alias:'',
-    //     name: 'Login',  
-    //     component: Login,  //指定的组件
-    //   }
-    // ]
+      children:[
+        {
+        path: 'login',   //相对于/list的相对路径
+        // alias:'',
+        name: 'Login',  
+        component: Login,  //指定的组件
+      }
+    ]
     }
   ]
 })
